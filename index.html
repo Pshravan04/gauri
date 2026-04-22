@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Quiet Space for Gauri 🌿</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div id="sparkle-container"></div>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1 id="hero-title">Rest easy, Gauri.</h1>
+            <p id="hero-subtitle">A quiet space built just for you.</p>
+        </header>
+
+        <!-- Message Section -->
+        <section class="message-section glass" id="message">
+            <h2>A Moment of Reflection</h2>
+            <div class="paragraph-content">
+                <span id="typed-text"></span><span class="typewriter-cursor"></span>
+            </div>
+        </section>
+
+        <!-- Game Section (In the Middle) -->
+        <section class="game-card glass" id="heart-game">
+            <h3>Gather the Sunflowers 🌻</h3>
+            <p style="opacity: 0.8;">A little game to brighten your mood. Catch the flowers and hearts!</p>
+            <div id="game-canvas"></div>
+            <button class="cute-btn" onclick="startGame()">Start Activity 🎮</button>
+            <p id="score">Score: 0</p>
+        </section>
+
+        <!-- Pick-up Lines / Compliments Section -->
+        <section class="lines-section glass" id="pickup-lines">
+            <h2>Words for the Soul</h2>
+            <div id="line-display">
+                "Your perspective on things is consistently the most interesting part of my day."
+            </div>
+            <button class="cute-btn" onclick="nextPickUpLine()">Read Another</button>
+        </section>
+
+        <!-- Activities Section -->
+        <section class="games-section">
+            <div class="game-card glass" id="virtual-hug">
+                <h3>A Gentle Reminder</h3>
+                <p style="margin-bottom: 2rem; opacity: 0.8;">Take a deep breath. Sometimes all you need is a small
+                    reminder that you are seen.</p>
+                <button class="cute-btn" onclick="sendHug()">Receive a Hug 🧸</button>
+            </div>
+
+            <div class="game-card glass" id="music">
+                <h3>Your Soundtrack</h3>
+                <div class="player">
+                    <audio id="main-audio" src=""></audio>
+                    <div class="song-list">
+                        <!-- DARKHAAST -->
+                        <div class="song-item" onclick="playSpecificSong(0)">
+                            <div class="song-info-mini">
+                                <span class="song-title-mini">DARKHAAST</span>
+                                <span class="song-note-mini">I know this is your absolute favorite. 🌸</span>
+                            </div>
+                            <button class="ctrl-btn-mini"><i class="fas fa-play"></i></button>
+                        </div>
+                        <!-- Voh Dekhnay Mein -->
+                        <div class="song-item" onclick="playSpecificSong(1)">
+                            <div class="song-info-mini">
+                                <span class="song-title-mini">Voh Dekhnay Mein</span>
+                                <span class="song-note-mini">This is what I've always wanted to tell you... 🤍</span>
+                            </div>
+                            <button class="ctrl-btn-mini"><i class="fas fa-play"></i></button>
+                        </div>
+                        <!-- Raabta -->
+                        <div class="song-item" onclick="playSpecificSong(2)">
+                            <div class="song-info-mini">
+                                <span class="song-title-mini">Raabta</span>
+                                <span class="song-note-mini">God's plan. ✨</span>
+                            </div>
+                            <button class="ctrl-btn-mini"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 4rem; opacity: 0.4; font-size: 0.8rem; letter-spacing: 1px;">
+            BUILT WITH SINCERITY FOR GAURI
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
